@@ -38,8 +38,9 @@ public class UserServiceImpl implements UserService{
 		userRepository.deleteById(id);
 	}
 
+
 	@Override
-	public User updateUser(User user, long id) {
+	public User updateUser(long id, User user) {
 		// TODO Auto-generated method stub
 		User user1 = userRepository.findById(id).get();
 		user1.setEmail(user.getEmail());
